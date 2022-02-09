@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
 	margin: 0;
 	background-color: black;
@@ -13,4 +14,21 @@ body {
 #root canvas {
 	display: block;
  margin: 0;
+=======
+body {
+	margin: 0;
+	background-color: black;
+}
+#root {
+	padding: 3rem;
+	text-align: center;
+}
+#root h1 {
+	font-family: 'Press Start 2P', Consolas, monospace;
+	color:white;
+}
+#root canvas {
+	display: block;
+ margin: 0;
+>>>>>>> a2ea9522129dd264a4c4a2cf7c67cad5d5a6a621
 }
