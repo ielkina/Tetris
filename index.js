@@ -10,4 +10,23 @@ const view = new View(root, 320, 640, 20, 10);
 window.game = game;
 window.view = view;
 
-view.renderPlayfiled(game.playfield);
+document.addEventListener('keydown', event => {
+	switch (event.keyCode) {
+		case 37: //left
+			game.movePieceLeft();
+			view.render(game.getState());
+			break;
+		case 38: //up arrow
+			game.rotatePiece();
+			view.render(game.getState());
+			break;
+		case 39: //right arrow
+			game.movePieceRight();
+			view.render(game.getState());
+			break;
+		case 40: // down arrow
+			game.movePieceDown();
+			view.render(game.getState());
+			break;
+	}
+});
