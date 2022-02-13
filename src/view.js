@@ -86,10 +86,10 @@ export default class View {
 
 				if (block) {
 					this.renderBlock(
-						this.panelX + (x * this.blockWidth),
-						this.panelY + 100 + (y * this.blockHeight),
-						this.blockWidth,
-						this.blockHeight,
+						this.panelX + (x * this.blockWidth * 0.5),
+						this.panelY + 100 + (y * this.blockHeight * 0.5),
+						this.blockWidth * 0.5,
+						this.blockHeight * 0.5,
 						View.colors[block]
 					);
 				}
