@@ -2,8 +2,18 @@ export default class Controller {
 	constructor(game, view) {
 		this.game = game;
 		this.view = view;
+
+		setInterval(() => {
+			this.update();
+		}, 1000);
+
 		document.addEventListener('keydown', this.handleKeyDown.bind(this));
 		this.view.renderStartScreen();
+	}
+
+	update() {
+		this.game.movePieceDown();
+		this.view.renderMainScreen(this.game.getState());
 	}
 
 	handleKeyDown(event) {
