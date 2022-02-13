@@ -32,6 +32,11 @@ export default class View {
 		this.blockWidth = this.playfieldInnerWidth / columns;
 		this.blockHeight = this.playfieldInnerHeight / rows;
 
+		this.panelX = this.playfieldWidth + 10;
+		this.panelY = 0;
+		this.panelWidth = this.width / 3;
+		this.panelHeight = this.height;
+
 		this.element.appendChild(this.canvas);
 	}
 
