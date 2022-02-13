@@ -111,8 +111,8 @@ export default class View {
 		this.context.font = '14px "Press Start 2P"';
 
 		this.context.fillText(`Level: ${level}`, this.panelX, this.panelY + 0);
-		this.context.fillText(`Score: ${score}`, this.panelX, this.panelY + 24);
-		this.context.fillText(`Lines: ${lines}`, this.panelX, this.panelY + 48);
+		this.context.fillText(`Lines: ${lines}`, this.panelX, this.panelY + 24);
+		this.context.fillText(`Score: ${score}`, this.panelX, this.panelY + 48);
 		this.context.fillText(`Next:`, this.panelX, this.panelY + 96);
 
 		for (let y = 0; y < nextPiece.blocks.length; y++) {

@@ -31,18 +31,24 @@ export default class Controller {
 	}
 
 	updateView() {
-		if (!this.isPlaying) {
+		const state = this.game.getState();
+
+		if (state.isGameOver) {
+			this.view.renderEndScreen(state);
+		} else if (!this.isPlaying) {
 			this.view.renderPauseScreen();
 		} else {
-			this.view.renderMainScreen(this.game.getState());
+			this.view.renderMainScreen(state);
 		}
 	}
 
 	startTimer() {
+		const speed = 1000 - this.game.getState().level * 100;
+
 		if (!this.intervalId) {
 			this.intervalId = setInterval(() => {
 				this.update();
-			}, 1000);
+			}, speed > 0 ? speed : 100);
 		}
 	}
 
