@@ -19,6 +19,13 @@ export default class View {
 		this.canvas.height = this.height;
 		this.context = this.canvas.getContext('2d');
 
+		this.playfieldBorderWidth = 4;
+		this.playfieldX = this.playfieldBorderWidth;
+		this.playfieldY = this.playfieldBorderWidth;
+		this.playfieldBorderWidth = this.width * 2 / 3;
+
+
+
 		this.blockWidth = this.width / columns;
 		this.blockHeight = this.height / rows;
 
