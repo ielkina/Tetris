@@ -58,8 +58,8 @@ export default class View {
 
 				if (block) {
 					this.renderBlock(
-						x * this.blockWidth,
-						y * this.blockHeight,
+						this.playfieldX + (x * this.blockWidth),
+						this.playfieldY + (y * this.blockHeight),
 						this.blockWidth,
 						this.blockHeight,
 						View.colors[block]
@@ -75,10 +75,10 @@ export default class View {
 		this.context.fillStyle = 'wite';
 		this.context.font = '14px "Press Start 2P"';
 
-		this.context.fillText(`Level: ${level}`, 0, 0);
-		this.context.fillText(`Score: ${score}`, 0, 24);
-		this.context.fillText(`Lines: ${lines}`, 0, 48);
-		this.context.fillText(`Next`, 0, 96);
+		this.context.fillText(`Level: ${level}`, this.panelX, this.panelY + 0);
+		this.context.fillText(`Score: ${score}`, this.panelX, this.panelY + 24);
+		this.context.fillText(`Lines: ${lines}`, this.panelX, this.panelY + 48);
+		this.context.fillText(`Next:`, this.panelX, this.panelY + 96);
 
 		for (let y = 0; y < nextPiece.blocks.length; y++) {
 			for (let x = 0; x < nextPiece.blocks[y].length; x++) {
@@ -86,8 +86,8 @@ export default class View {
 
 				if (block) {
 					this.renderBlock(
-						x * this.blockWidth,
-						y * this.blockHeight,
+						this.panelX + (x * this.blockWidth),
+						this.panelY + 100 + (y * this.blockHeight),
 						this.blockWidth,
 						this.blockHeight,
 						View.colors[block]

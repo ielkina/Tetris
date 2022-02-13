@@ -16,5 +16,5 @@ body {
 #root canvas {
    display: block;
    margin: 0 auto;
-   /* border: 2px solid rgb(5, 207, 5); */
+   border: 2px solid rgb(5, 207, 5);
 }
