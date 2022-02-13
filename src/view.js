@@ -40,14 +40,11 @@ export default class View {
 		this.element.appendChild(this.canvas);
 	}
 
-	render(state) {
+	renderMainScreen(state) {
 
 		this.clearScreen();
 		this.renderPlayfield(state);
 		this.renderPanel(state);
-	}
-	clearScreen() {
-		this.context.clearRect(0, 0, this.width, this.height);
 	}
 
 	renderPauseScreen() {
@@ -79,6 +76,10 @@ export default class View {
 		this.context.textAlign = 'center';
 		this.context.textBaseline = 'middle';
 		this.context.fillText('Press ENTER to Start', this.width / 2, this.height / 2);
+	}
+
+	clearScreen() {
+		this.context.clearRect(0, 0, this.width, this.height);
 	}
 
 	renderPlayfield({ playfield }) {
