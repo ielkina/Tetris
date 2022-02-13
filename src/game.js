@@ -14,7 +14,7 @@ export default class Game {
 	nextPiece = this.createPiece();
 
 	get level() {
-		return Math.floor(this.lines * 0.1);
+		return Math.floor(this.lines * 1);
 
 	}
 

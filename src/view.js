@@ -61,6 +61,9 @@ export default class View {
 		this.context.font = '14px "Press Start 2P"';
 
 		this.context.fillText(`Level: ${level}`, 0, 0);
+		this.context.fillText(`Score: ${score}`, 0, 24);
+		this.context.fillText(`Lines: ${lines}`, 0, 48);
+		this.context.fillText(`Next`, 0, 96);
 	}
 
 	renderBlock(x, y, width, height, color) {
