@@ -67,12 +67,15 @@ export default class View {
 				}
 			}
 		}
+		this.context.strokeStyle = 'white';
+		this.context.lineWidth = this.playfieldBorderWidth;
+		this.context.strokeRect(0, 0, this.playfieldWidth, this.playfieldHeight);
 	}
 
 	renderPanel({ level, score, lines, nextPiece }) {
 		this.context.textAlign = 'start';
 		this.context.textBaseline = 'top';
-		this.context.fillStyle = 'wite';
+		this.context.fillStyle = 'white';
 		this.context.font = '14px "Press Start 2P"';
 
 		this.context.fillText(`Level: ${level}`, this.panelX, this.panelY + 0);
